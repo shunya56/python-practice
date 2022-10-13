@@ -8,7 +8,6 @@ on:
       - "**.py"
 jobs:
   test:
-    name: Python Testing
     runs-on: ubuntu-latest
     steps:
       - name: Check Out
