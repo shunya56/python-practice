@@ -24,4 +24,4 @@ jobs:
           echo "::add-matcher::.github/flake8_warning.json"
       - name: Run flake8
         run: |
-          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127
+          flake8 . --count --max-complexity=10 --max-line-length=127 --ignore=E501,E711,E261
