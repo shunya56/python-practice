@@ -5,7 +5,6 @@ from scoop import futures
 from deap import base
 from deap import creator
 from deap import tools
-from deap import cma
 
 # 従業員を表すクラス
 
@@ -50,7 +49,7 @@ class Shift(object):
         2, 4, 4]
 
     def __init__(self, list):
-        if list == None:
+        if list is None:
             self.make_sample()
         else:
             self.list = list
