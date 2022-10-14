@@ -41,8 +41,7 @@ jobs:
         run: pip install mypy
       - name: Add Problem Matcher
         run: |
-          echo "::add-matcher::.github/flake8_error.json"
-          echo "::add-matcher::.github/flake8_warning.json"
+          echo "::add-matcher::.github/mypy_error.json"
       - name: Run mypy
         run: |
           mypy .
