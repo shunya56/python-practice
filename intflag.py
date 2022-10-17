@@ -1,14 +1,14 @@
-from enum import Enum, unique, IntFlag, auto
+from enum import IntFlag, auto
 
 
 class Shift(IntFlag):
-    MON = auto() # 1
-    TUE = auto() # 2
-    WED = auto() # 4
-    THU = auto() # 8
-    FRI = auto() # 16
-    SAT = auto() # 32
-    SUN = auto() # 64
+    MON = auto()  # 1
+    TUE = auto()  # 2
+    WED = auto()  # 4
+    THU = auto()  # 8
+    FRI = auto()  # 16
+    SAT = auto()  # 32
+    SUN = auto()  # 64
 
     def is_holiday(self) -> bool:
         return self is self.SAT | self.SUN
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     print(int(Shift.FRI))
     print(int(Shift.SAT))
     print(int(Shift.SUN))
-    
+
     # 10進数から
     flag = Shift(16)
     print(flag)
