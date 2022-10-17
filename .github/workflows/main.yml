@@ -22,6 +22,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Add Problem Matcher
         run: |
+          echo "::add-matcher::.github/flake8_error.json"
+          echo "::add-matcher::.github/flake8_error.json"
           echo "::add-matcher::.github/lint_error.json"
       - name: flake8
         run: |
