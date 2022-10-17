@@ -24,7 +24,7 @@ jobs:
         run: |
           echo "::add-matcher::.github/flake8_error.json"
           echo "::add-matcher::.github/flake8_error.json"
-          echo "::add-matcher::.github/lint_error.json"
+          echo "::add-matcher::.github/mypy_error.json"
       - name: flake8
         run: |
           flake8 . --count --max-complexity=10 --max-line-length=127 --ignore=E226,W503
