@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import random
-from scoop import futures  # noqa
+from scoop import futures
 
-from deap import base  # noqa
-from deap import creator  # noqa
-from deap import tools  # noqa
+from deap import base
+from deap import creator
+from deap import tools
 
 # 従業員を表すクラス
 
