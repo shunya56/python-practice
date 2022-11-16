@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 import random
-from scoop import futures
+from scoop import futures  # noqa
 
-from deap import base
-from deap import creator
-from deap import tools
+from deap import base  # noqa
+from deap import creator  # noqa
+from deap import tools  # noqa
 
 # 従業員を表すクラス
 
@@ -330,7 +330,7 @@ if __name__ == '__main__':
 
         # 適合度が計算されていない個体を集めて適合度を計算
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-        fitnesses = map(toolbox.evaluate, invalid_ind)
+        fitnesses = map(toolbox.evaluate, invalid_ind)  # noqa
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
 
