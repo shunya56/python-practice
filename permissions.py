@@ -57,5 +57,5 @@ if __name__ == "__main__":
     #     write=OperatorPermission.feature_a
     # )
 
-    #　NOTE: DBには、permissionsテーブルにuse_id, read, writeの３カラムを管理するイメージ。
-    #　read, writeには
+    # NOTE: DBには、permissionsテーブルにuse_id, read, writeの３カラムを管理するイメージ。
+    # read, writeには
