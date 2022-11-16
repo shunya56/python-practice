@@ -6,7 +6,7 @@ import itertools
 
 @unique
 class Week(Enum):
-    MONDAY= calendar.MONDAY
+    MONDAY = calendar.MONDAY
     TUESDAY = calendar.TUESDAY
     WEDNESDAY = calendar.WEDNESDAY
     THURSDAY = calendar.THURSDAY
