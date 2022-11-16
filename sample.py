@@ -5,7 +5,6 @@ from scoop import futures
 from deap import base
 from deap import creator
 from deap import tools
-from deap import cma
 
 # 従業員を表すクラス
 
@@ -50,7 +49,7 @@ class Shift(object):
         2, 4, 4]
 
     def __init__(self, list):
-        if list == None:
+        if list is None:
             self.make_sample()
         else:
             self.list = list
@@ -331,7 +330,7 @@ if __name__ == '__main__':
 
         # 適合度が計算されていない個体を集めて適合度を計算
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-        fitnesses = map(toolbox.evaluate, invalid_ind)
+        fitnesses = map(toolbox.evaluate, invalid_ind)  # type: ignore
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
 
