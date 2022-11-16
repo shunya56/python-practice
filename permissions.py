@@ -20,7 +20,6 @@ class OperatorPermissions(IntFlag):
         return int(self)
 
 
-
 if __name__ == "__main__":
     print("1========")
     permission = OperatorPermissions(3)
@@ -38,9 +37,8 @@ if __name__ == "__main__":
     print(permission)
     print(permission.to_int())
 
-
     print("2========")
-    # 
+    #
     permission = OperatorPermissions(8)
     print(permission.has_permission_feature_a())
     print(permission.has_permission_feature_b())
@@ -48,18 +46,16 @@ if __name__ == "__main__":
     print(permission)
     print(permission.to_int())
 
-
     print("3========")
     print(int(permission.feature_a))
     print(int(permission.feature_a) + int(permission.feature_b))
-    
-    
+
     # NOTE: エンドポイントで以下のようなデコレータを呼び出す
     # デコレータ内でログインユーザーに設定された権限と以下の引数で指定された権限を突き合わせて満たしているかチェックする
     # @permission_required(
     #     read=OperatorPermission.feature_a,
     #     write=OperatorPermission.feature_a
     # )
-    
+
     #　NOTE: DBには、permissionsテーブルにuse_id, read, writeの３カラムを管理するイメージ。
     #　read, writeには
