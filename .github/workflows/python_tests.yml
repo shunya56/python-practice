@@ -33,4 +33,4 @@ jobs:
           flake8 . --count --max-complexity=10 --max-line-length=127 --ignore=E226,W503
       - name: Run mypy
         run: |
-          mypy .
+          mypy . -s

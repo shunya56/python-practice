@@ -330,7 +330,7 @@ if __name__ == '__main__':
 
         # 適合度が計算されていない個体を集めて適合度を計算
         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-        fitnesses = map(toolbox.evaluate, invalid_ind)  # noqa
+        fitnesses = map(toolbox.evaluate, invalid_ind)  # type: ignore
         for ind, fit in zip(invalid_ind, fitnesses):
             ind.fitness.values = fit
 
