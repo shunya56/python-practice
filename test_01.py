@@ -1,4 +1,4 @@
-li = []
+li: list = []
 
 print(len(li))
 if (len(li)):
