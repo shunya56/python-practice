@@ -8,6 +8,7 @@ on:
       - "**.py"
 jobs:
   tests:
+    name: Lint & Test
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
