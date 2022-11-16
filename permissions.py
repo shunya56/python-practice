@@ -8,13 +8,13 @@ class OperatorPermissions(IntFlag):
     feature_c = auto()  # 4
 
     def has_permission_feature_a(self):
-        return self.feature_a in self
+        return OperatorPermissions.feature_a in self
 
     def has_permission_feature_b(self):
-        return self.feature_b in self
+        return OperatorPermissions.feature_b in self
 
     def has_permission_feature_c(self):
-        return self.feature_c in self
+        return OperatorPermissions.feature_c in self
 
     def to_int(self):
         return int(self)
